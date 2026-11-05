@@ -1,0 +1,19 @@
+---
+title: 收藏
+layout: page
+description: "「这些年攒下来的网址」"
+header-img: "img/home-bg.jpg"
+header-mask: 0.3
+---
+
+<ul class="list-unstyled">
+    {% for s in site.data.sites %}
+    <li style="margin-bottom:14px">
+        <h2 class="post-title" style="font-size:20px;margin:0">
+            <a href="{{ s.href }}">{{ s.title }}</a>
+            {% if s.tag %}<small class="text-muted" style="font-size:12px"> {{ s.tag }}</small>{% endif %}
+        </h2>
+        {% if s.desc %}<p class="post-subtitle" style="margin:2px 0">{{ s.desc }}</p>{% endif %}
+    </li>
+    {% endfor %}
+</ul>

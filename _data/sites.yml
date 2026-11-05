@@ -1,0 +1,4 @@
+# 收藏的网站 —— 一条一行，复制一行改内容即可
+# 字段：title 必填；href 网址；desc 一句话；tag 分类(工具/素材/学习…)
+
+- { title: "示例：百度", href: "https://www.baidu.com", desc: "把这段换成你自己的收藏", tag: "工具" }

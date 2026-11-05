@@ -1,0 +1,22 @@
+---
+title: 作品
+layout: page
+description: "「做过的东西都在这」"
+header-img: "img/home-bg.jpg"
+header-mask: 0.3
+---
+
+<div class="row">
+    {% for w in site.data.works %}
+    <div class="col-md-6">
+        <div class="post-preview">
+            {% if w.img %}<a href="{{ w.link | default: '#' }}"><img src="{{ w.img }}" style="width:100%;margin-bottom:12px"></a>{% endif %}
+            <h2 class="post-title">
+                {% if w.link %}<a href="{{ w.link }}">{{ w.title }}</a>{% else %}{{ w.title }}{% endif %}
+            </h2>
+            {% if w.desc %}<h3 class="post-subtitle">{{ w.desc }}</h3>{% endif %}
+            <p class="post-meta">{{ w.tag }}{% if w.date %} · {{ w.date }}{% endif %}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
